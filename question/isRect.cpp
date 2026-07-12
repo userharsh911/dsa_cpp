@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    int a = 5;
+    int a = 10;
     int b = 5;
-    int c = 5;
+    int c = 10;
     int d = 5;
     int count = 0;
     if(a==b || a==c || a==d){
@@ -18,9 +18,9 @@ int main()
     }
 
     if(count==2){
-        cout<<"can for rectangle";
+        cout<<"can form rectangle";
     }else{
-        cout<<"can not for rectangle";
+        cout<<"can not form rectangle";
     }
     
     return 0;    
