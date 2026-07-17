@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main(){
@@ -9,8 +10,12 @@ int main(){
         ans++;
     }
 
-    cout<<ans<<num;
+    cout<<ans<<num<<endl;
 
+
+    string c = "5";
+
+    cout<<c[0]-'0';
 
     return 0;
 }
