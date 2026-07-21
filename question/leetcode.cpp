@@ -1,0 +1,20 @@
+//Rearrange String to Avoid Character Pair©leetcode
+
+#include <iostream>
+using namespace std;
+int main(){
+    class Solution {
+    public:
+        string rearrangeString(string s, char x, char y) {
+            string ans;
+            for(char c : s) if(c == y) ans += c;
+            
+            for(char c : s) if(c != x && c != y) ans += c;
+            
+            for(char c : s) if(c == x) ans += c;
+            
+            return ans;
+        }
+    };
+    return 0;
+}
