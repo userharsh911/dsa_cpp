@@ -2,14 +2,11 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+  
 // only applicable for nxn matrix as we transpose i+j and in spaceO(1)
 
-void rotate_matrix_90(vector<vector<int>>& matrix){
-    
-    for(int i=0;i<matrix.size()/2;i++){
-        for(int j=0;j<matrix.size();j++) swap(matrix[i][j],matrix[(matrix.size()-1)-i][j]);
-    }
+void rotate_matrix_90_anti_clockwise(vector<vector<int>>& matrix){
+    for(vector<int> v : matrix) reverse(v.begin(),v.end());
 
     // transpose matrix 
 
@@ -21,7 +18,7 @@ void rotate_matrix_90(vector<vector<int>>& matrix){
 int main(){
     vector<vector<int>> matrix = {{11,22,33,44},{55,66,77,88},{99,10,11,12},{13,14,15,16}};
 
-    rotate_matrix_90(matrix);
+    rotate_matrix_90_anti_clockwise(matrix);
 
     for(vector<int> v : matrix){
         for(int v : v)
