@@ -14,14 +14,23 @@ int main(){
     //     cout<<i<<" ";
 
 
-    vector<int> v = {22,33,445,66,7};
-    // sort(v.begin(),v.end(),greater<int>());
-    sort(v.rbegin(),v.rend());
+    // vector<int> v = {22,33,445,66,7};
+    // // sort(v.begin(),v.end(),greater<int>());
+    // sort(v.rbegin(),v.rend());
 
-    for(auto v : v)
-        cout<<v<<" ";
-    cout<<endl;
-    cout<<find(v.begin(),v.end(),66)-v.begin(); // return index of 66 if not return size of vector v
+    // for(auto v : v)
+    //     cout<<v<<" ";
+    
+    // cout<<endl;
+    // cout<<find(v.begin(),v.end(),66)-v.begin(); // return index of 66 if not return size of vector v
+
+
+
+    vector<int> v {22,33,55,72};
+
+    v.erase(v.begin()+2);
+
+    cout<<v[2];
 
     return 0;
 }
