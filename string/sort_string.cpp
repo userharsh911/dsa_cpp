@@ -16,6 +16,8 @@ void sort_string(string& s){
 int main(){
     string s =  "bcdcatyadwwe";
     sort_string(s);
-    cout<<s;
+    cout<<s<<endl;
+
+    vector<string> ones {"I","II","III","IV","V","VI","VII","VIII","IX"};
     return 0;
 }
