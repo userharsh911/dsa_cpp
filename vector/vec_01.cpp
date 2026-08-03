@@ -26,11 +26,17 @@ int main(){
 
 
 
-    vector<int> v {22,33,55,72};
+    vector<int> v {22,44,55,72};
 
-    v.erase(v.begin()+2);
+    // v.erase(v.begin()+2);
 
-    cout<<v[2];
+    // cout<<v[2];
+
+    cout<<*v.insert(v.begin(),2,33)<<endl;
+    cout<<v[0]<<endl;
+    cout<<v[1]<<endl;
+    cout<<v[2]<<endl;
+    cout<<v[3]<<endl;
 
     return 0;
 }
