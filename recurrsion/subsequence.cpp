@@ -2,21 +2,21 @@
 #include <vector>
 using namespace std;
 
-void subsequence(vector<int>& v, vector<vector<int>>& subsequenceSet, vector<int>& set, int pointer = -1, bool is = false){
-    if(is) set.push_back(v[pointer]);
+void subsequence(vector<int>& v, vector<vector<int>>& subsequenceSet, vector<int>& set, int pointer = 0){
 
-    if(pointer == v.size() - 1){
+    if(pointer == v.size()){
         subsequenceSet.push_back(set);
         set.pop_back();
         return;
     }
-
-    subsequence(v, subsequenceSet, set, pointer + 1, true);
-    subsequence(v, subsequenceSet, set, pointer + 1, false);
+    set.push_back(v[pointer]);
+    subsequence(v, subsequenceSet, set, pointer + 1);
+    // set.pop_back();
+    subsequence(v, subsequenceSet, set, pointer + 1);
 }
 
 int main(){
-    vector<int> v {3,4,5};
+    vector<int> v {1,2,3};
     vector<vector<int>> set;
     vector<int> c;
     subsequence(v, set, c);
