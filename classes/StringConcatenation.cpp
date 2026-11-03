@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 #include <string>
 using namespace std;
 
@@ -14,7 +15,6 @@ class Concat{
 
 int main(){
     Concat s("Harsh");
-    cout<<s + " World";
-
+    cout<<s + " World"<<endl;
     return 0;
 }
